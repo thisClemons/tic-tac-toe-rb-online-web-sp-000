@@ -117,6 +117,7 @@ def play(board)
     puts "Draw game"
   else
     puts "Congrats player #{winner(board)}"
+  end
 end
 
 play([" ", " ", " ", " ", " ", " ", " ", " ", " "])
