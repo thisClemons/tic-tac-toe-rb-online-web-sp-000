@@ -112,8 +112,7 @@ def play(board)
   turn(board)
   if !over?(board)
     play(board)
-  end
-  if(draw?(board))
+  elsif(draw?(board))
     puts "Draw game"
   else
     puts "Congrats player #{winner(board)}"
