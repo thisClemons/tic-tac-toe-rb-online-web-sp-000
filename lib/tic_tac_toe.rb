@@ -113,6 +113,10 @@ def play(board)
   if !over?(board)
     play(board)
   end
+  if(draw?(board))
+    puts "Draw game"
+  else
+    puts "Congrats player #{winner(board)}"
 end
 
 play([" ", " ", " ", " ", " ", " ", " ", " ", " "])
