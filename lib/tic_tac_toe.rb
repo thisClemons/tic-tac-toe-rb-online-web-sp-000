@@ -90,9 +90,10 @@ def full?(board)
 end
 
 def draw?(board)
-  return true if !won?(board) && full?(board)
-  return false if !won?(board) && !full?(board)
-  return false if won?(board)
+  !won?(board) && full?(board) ? true : false
+  # return true if !won?(board) && full?(board)
+  # return false if !won?(board) && !full?(board)
+  # return false if won?(board)
 end
 
 def over?(board)
@@ -107,4 +108,15 @@ def winner(board)
   end
 end
 
-puts draw?(%w[X O X O X X O X O])
+def play(board)
+  while !over?(board)
+    turn(board)
+  end
+  if(draw?(board))
+    puts "Cat's Game!"
+  else
+    puts "Congratulations #{winner(board)}!"
+  end
+end
+
+#play([" ", " ", " ", " ", " ", " ", " ", " ", " "])
